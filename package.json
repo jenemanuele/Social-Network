@@ -1,0 +1,25 @@
+{
+  "name": "social-network",
+  "version": "1.0.0",
+  "description": "GIVEN a social network API\r WHEN I enter the command to invoke the application\r THEN my server is started and the Mongoose models are synced to the MongoDB database\r WHEN I open API GET routes in Insomnia for users and thoughts\r THEN the data for each of these routes is displayed in a formatted JSON\r WHEN I test API POST, PUT, and DELETE routes in Insomnia\r THEN I am able to successfully create, update, and delete users and thoughts in my database\r WHEN I test API POST and DELETE routes in Insomnia\r THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jenemanuele/Social-Network.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jenemanuele/Social-Network/issues"
+  },
+  "homepage": "https://github.com/jenemanuele/Social-Network#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "moment": "^2.29.1",
+    "mongoose": "^6.2.4"
+  }
+}
