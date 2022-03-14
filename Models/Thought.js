@@ -1,9 +1,38 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
 const moment = require('moment');
 
+// Reaction schema to be added to Thought model as a subdocument.
+const ReactionSchema = new Schema({
+    reactionId: {
+        type: Schema.Types.ObjectId,
+        default: () => new Types.ObjectId()
+    },
+    reactionBody: {
+        type: String,
+        required: true,
+        trim: true,
+        minlength: 1,
+        maxlength: 280
+    },
+    username: {
+        type: String, 
+        required: true
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+        get: createdAtVal => moment(createdAtVal).format('MM DD, YYY [at] hh: mm a')
+    }
+},
+    {
+        toJSON: {
+        getters: true
+        }
+    }
+);
 
 // Thought schema
-const thoughtSchema = new Schema(
+const ThoughtSchema = new Schema(
     {
         thoughtText: {
             type: String,
@@ -31,36 +60,6 @@ const thoughtSchema = new Schema(
         id: false
     }
 );
-
-// Reaction schema to be added to Thought model as a subdocument.
-const ReactionSchema = new Schema({
-    reactionId: {
-        type: Schema.Types.ObjectId,
-        default: () => new Types.ObjectId()
-    },
-    reactionBody: {
-        type: String,
-        required: true,
-    },
-    username: {
-        type: String, 
-        required: true
-    },
-    createdAt: {
-        type: Date,
-        default: Date.now,
-        get: createdAtVal => moment(createdAtVal).format('MM DD, YYY [at] hh: mm a')
-    }
-},
-    {
-        toJSON: {
-            virtuals: true,
-            getters: true
-        },
-        id: false
-    }
-);
-
 
 // get total count of thoughts on retrieval
 ThoughtSchema.virtual('reactionCount').get(function(){
