@@ -33,4 +33,4 @@
   #  💜 Screenshot 💜 
   ![alt text](images/screenshot.1.PNG)
   # 📹 Video 📹
-  https://drive.google.com/file/d/1rHY2iq_uTwIUqfAgrZ5nXJZZ7dHYf45n/view
+ <iframe src="https://drive.google.com/file/d/1rHY2iq_uTwIUqfAgrZ5nXJZZ7dHYf45n/preview" width="640" height="480"></iframe>
