@@ -30,7 +30,6 @@
   ### Reach me here:
   [jenemanuele](https://github.com/jenemanuele) 
   or jemanuele@gmail.com
-  #  💜 Screenshot 💜 
-  ![alt text](images/screenshot.1.PNG)
+
   # 📹 Video 📹
  https://drive.google.com/file/d/1rHY2iq_uTwIUqfAgrZ5nXJZZ7dHYf45n/view
